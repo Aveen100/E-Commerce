@@ -56,8 +56,8 @@ export default new Vuex.Store({
     GetSearch(state, SearchedProducts) {
       state.SearchedProducts = SearchedProducts;
     },
-    SetUserCart(state, y) {
-      state.UserCart.push(y);
+    SetUserCart(state, id) {
+      state.UserCart.push(id);
     },
   },
   actions: {

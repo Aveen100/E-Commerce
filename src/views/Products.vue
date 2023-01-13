@@ -242,6 +242,8 @@ export default {
 
       // ********  Scroll to top After moving on next page in pagination ***********
 
+
+// ********  Scroll to top After moving on next page in pagination ***********
     scrollToTop() {
     window.scrollTo(0,0);
   },
@@ -251,7 +253,7 @@ export default {
       localStorage.setItem("ProductID", index);
       this.$router.push({ name: "productdetails" });
     },
-
+// map actions for vuex 
     ...mapActions(["fetchAllProducts"]),
     ...mapActions(["FetchCategories"]),
     ...mapActions(["FilterCategories"]),
@@ -262,7 +264,7 @@ export default {
       window.localStorage.setItem("NewProduct", JSON.stringify(this.Product));
     },
   },
-
+//  mounted function for vuex
   mounted() {
     
     this.fetchAllProducts();
