@@ -82,8 +82,8 @@
 
     <!-- ***********  Services End **********  -->
 
-    <!-- ***********  Categories Start  /// Our Products **********  -->
-    <v-container fluid>
+    <!-- ***********  Our Story **********  -->
+    <v-container fluid class="hidden-md-and-down">
       <v-layout>
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="8">
@@ -91,7 +91,7 @@
           </v-col>
         </v-row>
       </v-layout>
-      <v-row>
+      <v-row >
         <v-col class="col-3"></v-col>
         <v-col class="col-3">
           <p class="subtitle-1 grey--text">
@@ -108,7 +108,7 @@
         </v-col>
         <v-divider vertical ></v-divider>
         <v-col class="col-3">
-          <p justify="center" class="subtitle-1 grey--text">
+          <p class="subtitle-1 grey--text text-justify">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type

@@ -14,6 +14,7 @@
           Check Out
         </v-btn>
       </template>
+
       <v-card>
         <v-card-title>
           <h3 class="text-h5 warning--text">Shipping Informarion</h3>
@@ -22,14 +23,14 @@
           <v-container>
             <v-row>
               <v-col cols="12" sm="6" md="4">
-                <v-text-field label="Enter First Name" required></v-text-field>
+                <v-text-field label="Enter First Name"  required></v-text-field>
               </v-col>
 
               <v-col cols="12" sm="6" md="4">
-                <v-text-field label="Enter last name*" required></v-text-field>
+                <v-text-field label="Enter last name*"  required></v-text-field>
               </v-col>
               <v-col cols="12">
-                <v-text-field label="Enter Email*" required></v-text-field>
+                <v-text-field label="Enter Email*"  required></v-text-field>
               </v-col>
               <v-col cols="12">
                 <v-text-field
@@ -47,7 +48,7 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="warning" text @click="dialog = false"> Close </v-btn>
-          <v-btn dark text color="warning" @click="snackbar = true">
+          <v-btn dark text color="warning" @click="snackbar = true ,reload()">
             Order Now
           </v-btn>
 
@@ -78,8 +79,14 @@ export default {
     return {
       dialog: false,
       snackbar: false,
+     
     };
   },
+  methods:{
+    reload(){
+      this.$router.go()
+    }
+  }
 };
 </script>
 
