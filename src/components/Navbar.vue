@@ -94,7 +94,6 @@
 <script>
 import { mapActions, mapGetters } from "vuex";
 import Cart from "./Cart.vue";
-
 export default {
   name: "Navbar",
   components: {
@@ -115,19 +114,18 @@ export default {
   methods: {
     ...mapActions(["SearchProduct"]),
 
-        // ****** Getting Users Details to display in the Sidebar *********
-
-    GetUserDetails() {
-      let data = JSON.parse(window.localStorage.getItem("LoginData"));
-      this.Uname = data.username;
-      this.img = data.image;
-    },
+   
         // ****** Logout  *********
 
     logout() {
       window.localStorage.removeItem("LoginData");
       this.$router.go();
       this.$router.push({ name: "home" });
+    },
+    UserDetails(){
+      const data= JSON.parse(localStorage.getItem("LoginData"));
+      this.Uname = data.username;
+      this.img = data.image;
     },
 
             // ******** Setting the Searched Keyword in the localstorage *********
@@ -137,6 +135,11 @@ export default {
       localStorage.setItem("SearchedItem", this.search.toLowerCase());
     },
   },
+  mounted(){
+    if(this.user){
+      this.UserDetails()
+    }
+  }
  
 };
 </script>

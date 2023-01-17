@@ -1,12 +1,16 @@
 <template>
-    <v-container fluid fill-height>
-       <v-layout align-center justify-center>
+
+      <v-container fluid fill-height style="background:#BDBDBD">
+         
+         <v-layout align-center justify-center>
           <v-flex xs12 sm8 md4>
              <v-card class="elevation-15">
                 <v-toolbar dark color="warning">
                    <v-toolbar-title >Login form</v-toolbar-title>
-                </v-toolbar>
-                <v-card-text>
+                  </v-toolbar>
+                  <v-card-text>
+                   <p>Username: kminchelle</p>
+                   <p>Password: 0lelplR</p>
                       <v-text-field
                          prepend-icon="mdi-account"
                          name="login"
@@ -38,6 +42,7 @@
 export default {
     data(){
   return{
+  
     username: '',
     password: '',
     cart: []
