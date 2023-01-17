@@ -6,15 +6,34 @@
 
       <!-- ********** Displaying Buttons of All Categories Starts ********* -->
       
-      <h3 class="ml-10">Categories</h3>
-      <v-chip
+      <!-- <h3 class="ml-10">Categories</h3> -->
+      <v-expansion-panels>
+        <v-expansion-panel
+        color="warning"
+        >
+          <v-expansion-panel-header class="font-weight-bold warning--text">
+            Categories
+          </v-expansion-panel-header>
+          <v-expansion-panel-content>
+            <v-btn
+            v-for="cat in categories"
+            :key="cat"
+            color="grey lighten-2"
+            class="ma-2 elevation-7"
+            v-on:click="FilterCategories(cat)"
+              >{{ cat }}</v-btn
+              >
+          </v-expansion-panel-content>
+        </v-expansion-panel>
+      </v-expansion-panels>
+      <!-- <v-chip
       v-for="cat in categories"
       :key="cat"
       color="warning"
       class="ma-2"
       v-on:click="FilterCategories(cat)"
         >{{ cat }}</v-chip
-        >
+        > -->
         <!-- ********** Displaying Buttons of All Categories End********* -->
         
       <v-divider></v-divider><br />

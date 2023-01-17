@@ -28,8 +28,8 @@
 
       <!-- ******** Cart Dialog Ends ********* -->
       <v-btn rounded class="warning elevation-10" v-if="!user" to="/Login">Login</v-btn>
-      <v-btn icon v-on:click="logout">
-        <v-icon v-if="user" >mdi-logout</v-icon>
+      <v-btn icon v-on:click="logout" v-if="user">
+        <v-icon >mdi-logout</v-icon>
         
         <!-- <v-icon v-if="!user" to="/Login" >mdi-login</v-icon> -->
       </v-btn>
@@ -126,7 +126,8 @@ export default {
 
     logout() {
       window.localStorage.removeItem("LoginData");
-      this.$router.push({ name: "Login" });
+      this.$router.go();
+      this.$router.push({ name: "home" });
     },
 
             // ******** Setting the Searched Keyword in the localstorage *********
