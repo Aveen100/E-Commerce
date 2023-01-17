@@ -17,7 +17,7 @@
         placeholder="Search Item"
         class="mt-5"
         ></v-text-field>
-        <v-icon color="grey" v-on:click="SearchedInput(), SearchProduct()">mdi-magnify</v-icon>
+        <v-icon  v-on:click="SearchedInput(), SearchProduct()">mdi-magnify</v-icon>
       </v-chip>
 
   
