@@ -45,7 +45,7 @@
           <v-avatar class="mx-15" size="100">
             <v-img :src="img"></v-img>
           </v-avatar>
-          <p class="text-center mt-2 subheading white--text">{{ Uname }}</p>
+          <p class="text-center mt-2 subheading white--text" >{{ Uname }}</p>
         </v-flex>
       </v-layout>
       <v-divider></v-divider>
@@ -136,9 +136,7 @@ export default {
       localStorage.setItem("SearchedItem", this.search.toLowerCase());
     },
   },
-  mounted() {
-    this.GetUserDetails();
-  },
+ 
 };
 </script>
 
