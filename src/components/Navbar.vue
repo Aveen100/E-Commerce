@@ -11,13 +11,13 @@
       <v-spacer></v-spacer>
       <v-chip class="grey lighten-2">
         <v-text-field
-          label="Search"
-          v-model="search"
-          v-on:click="SearchedInput(), SearchProduct()"
-          placeholder="Search Item"
-          class="mt-5"
-          prepend-icon="mdi-magnify"
+        label="Search"
+        v-model="search"
+        
+        placeholder="Search Item"
+        class="mt-5"
         ></v-text-field>
+        <v-icon color="grey" v-on:click="SearchedInput(), SearchProduct()">mdi-magnify</v-icon>
       </v-chip>
 
   
