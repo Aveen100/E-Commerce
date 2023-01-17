@@ -59,6 +59,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 </ul>
 
 <!-- ************    Components    *********** -->
+<h2>Components</h2>
 <ul>
     <li>Navbar</li>
     <li>Footer</li>
