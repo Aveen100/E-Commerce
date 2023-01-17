@@ -269,10 +269,7 @@ export default {
     
     this.fetchAllProducts();
     this.FetchCategories();
-    let x = localStorage.getItem("LoginData");
-    if (!x) {
-      this.$router.push({ name: "Login" });
-    }
+  
   },
 };
 </script>

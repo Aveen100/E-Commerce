@@ -20,18 +20,18 @@
         ></v-text-field>
       </v-chip>
 
-      <v-btn icon class="hidden-sm-and-down">
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
+  
 
       <!-- ******** Cart Dialog Starts ********* -->
 
       <Cart />
 
       <!-- ******** Cart Dialog Ends ********* -->
-
+      <v-btn rounded class="warning elevation-10" v-if="!user" to="/Login">Login</v-btn>
       <v-btn icon v-on:click="logout">
-        <v-icon>mdi-logout</v-icon>
+        <v-icon v-if="user" >mdi-logout</v-icon>
+        
+        <!-- <v-icon v-if="!user" to="/Login" >mdi-login</v-icon> -->
       </v-btn>
     </v-app-bar>
     <!-- **************ToolBar Ends ***************** -->
@@ -39,8 +39,8 @@
     <!-- **************Navigation drawer Start ***************** -->
 
     <v-navigation-drawer class="warning" app v-model="drawer">
-      <p class="text-center mt-4 headline">Profile</p>
-      <v-layout column align="center">
+      <p class="text-center mt-4 headline" v-if="user">Profile</p>
+      <v-layout column align="center" v-if="user">
         <v-flex>
           <v-avatar class="mx-15" size="100">
             <v-img :src="img"></v-img>
@@ -78,7 +78,7 @@
         </v-list-item-group>
       </v-list>
 
-      <template v-slot:append>
+      <template v-slot:append v-if="user">
         <div class="pa-2">
           <v-btn block class="grey lighten-2" v-on:click="logout">
             Logout
@@ -103,6 +103,7 @@ export default {
   data() {
     return {
       drawer: false,
+      user: window.localStorage.getItem("LoginData"),
       Uname: "",
       img: "",
       search: "",

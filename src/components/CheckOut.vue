@@ -9,7 +9,8 @@
           rounded
           v-bind="attrs"
           v-on="on"
-          justify="center"
+          justify="center" 
+          v-on:click="CheckUser()"
         >
           Check Out
         </v-btn>
@@ -79,12 +80,22 @@ export default {
     return {
       dialog: false,
       snackbar: false,
+      user: window.localStorage.getItem("LoginData"),
      
     };
   },
   methods:{
     reload(){
       this.$router.go()
+    },
+    CheckUser(){
+      const x = window.localStorage.getItem("LoginData")
+      if(x){
+        this.dialog = true
+      }
+      else{
+        this.$router.push("/Login")
+      }
     }
   }
 };

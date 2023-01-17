@@ -237,10 +237,7 @@ export default {
   },
   mounted() {
     this.DetailsPage();
-    let x = localStorage.getItem("LoginData");
-    if (!x) {
-      this.$router.push({ name: "Login" });
-    }
+   
   },
 };
 </script>

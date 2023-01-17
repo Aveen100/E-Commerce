@@ -152,13 +152,12 @@ export default {
   methods: {
     ...mapActions(["UserCart"])
   },
-  mounted() {
-    // this.UserCart();
-    let x = localStorage.getItem("LoginData");
-    if (!x) {
-      this.$router.push({ name: "Login" });
-    }
-  },
+  // mounted() {
+  //   let x = localStorage.getItem("LoginData");
+  //   if (!x) {
+  //     this.$router.push({ name: "Login" });
+  //   }
+  // },
   
 };
 </script>

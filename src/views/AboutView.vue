@@ -86,13 +86,7 @@ export default {
     Footer,
     Loader
   },
-  mounted() {
-    // this.UserCart();
-    let x = localStorage.getItem("LoginData");
-    if (!x) {
-      this.$router.push({ name: "Login" });
-    }
-  },
+
 };
 </script>
 
