@@ -39,7 +39,7 @@
       <v-divider></v-divider><br />
       <!-- ************* Start  of Add New Products Dialog Starts *************  -->
 
-      <v-row justify="center">
+      <v-row justify="center" v-if="user">
         <v-dialog v-model="dialog" max-width="600px">
           <template v-slot:activator="{ on, attrs }">
             <v-btn color="grey lighten-1" v-bind="attrs" v-on="on">
@@ -229,6 +229,7 @@ export default {
       page: 1,
       itemsPerPage: 10,
       dialog: false,
+      user: window.localStorage.getItem("LoginData"),
 
       Product: {
         title: "",

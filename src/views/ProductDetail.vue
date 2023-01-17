@@ -114,10 +114,10 @@
                   <v-chip
                     color="warning elevation-15 mx-5"
                     v-bind="attrs"
-                    v-on="on"
+                    v-on="on" v-if="user"
                     >Update Products Price</v-chip
                   >
-                  <v-chip
+                  <v-chip v-if="user"
                     class="warning elevation-15"
                     v-on:click="DeletePost(), (DeletedSnackbar = true)"
                     >Delete Product</v-chip
@@ -219,6 +219,7 @@ export default {
       DeletedSnackbar: false,
       UpdateSnackbar: false,
       NewPrice: "",
+      user: window.localStorage.getItem("LoginData"),
     };
   },
   computed: {
